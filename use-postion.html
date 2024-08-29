@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>div center by postion</title>
+    <style>
+      * {
+        margin: 0%;
+        padding: 0%;
+        box-sizing: border-box;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        text-transform: capitalize;
+      }
+      /* body{
+        height: max-content;
+      } */
+      .note{
+    display: flex;
+    gap: 25px;
+    width: 100%;
+    height: 17vh;
+    color: azure;
+    background-color: rgb(10, 173, 10);
+
+    justify-content: center;
+    align-items: center;
+}
+      .parent {
+        width: 100%;
+        height: 100vh;
+        background-color: rgb(9, 91, 241);
+
+        /* here starts  code for postion this is for child */
+        position: relative;
+      }
+
+      .child {
+        width: 500px;
+        aspect-ratio: 1;
+        background-color: rgb(17, 213, 219);
+        /* here starts  code for postion */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        /* here starts  code for postion relative for parent 1 */
+        position: relative;
+      }
+      .parent1 {
+        width: 300px;
+        height: 300px;
+        background-color: cornflowerblue;
+
+        /* here starts  code for postion */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        /* here starts  code for postion relative for child 1 */
+        position: relative;
+      }
+      .child1 {
+        width: 100px;
+        aspect-ratio: 1;
+        background-color: rgb(34, 219, 17);
+        /* here starts  code for postion */
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="note">
+      <div><h1>in parent <br> we give position: relative;</h1>
+        <h1>in child</h1>
+        <h1>
+          position: absolute; left: 50%; top: 50%; transform:
+          translate(-50%,-50%);
+        </h1></div>
+    </div>
+    <div class="parent">
+      <div class="child">
+        <div class="parent1">
+          <div class="child1"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

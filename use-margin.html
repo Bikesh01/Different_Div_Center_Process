@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>margin use for centering the div</title>
+    <style>
+      * {
+        margin: 0%;
+        padding: 0%;
+        box-sizing: border-box;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        text-transform: capitalize;
+      }
+      .note {
+        display: flex;
+        gap: 25px;
+        width: 100%;
+        height: 18vh;
+        color: azure;
+        background-color: rgb(10, 173, 10);
+
+        justify-content: center;
+        align-items: center;
+      }
+
+      .parent {
+        width: 100%;
+        height: 100vh;
+        background-color: rgb(9, 91, 241);
+
+        /* here starts  code for margin */
+        display: flex;
+      }
+
+      .child {
+        width: 500px;
+        aspect-ratio: 1;
+        background-color: rgb(17, 213, 219);
+
+        /* here starts  code for margin */
+
+        margin: auto;
+        display: flex;
+      }
+
+      .parent1 {
+        width: 300px;
+        height: 300px;
+        background-color: rgb(151, 175, 16);
+        /* here starts  code for margin */
+        display: flex;
+
+        margin: auto;
+      }
+
+      .child1 {
+        width: 100px;
+        aspect-ratio: 1;
+        background-color: rgb(17, 219, 84);
+
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="note">
+      <h1>
+        in parent we use <br />
+        display: flex; <br />child use <br />
+        margin: auto;
+      </h1>
+    </div>
+    <div class="parent">
+      <div class="child">
+        <div class="parent1">
+          <div class="child1"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
